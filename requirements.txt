@@ -1,0 +1,4 @@
+flask
+requests
+flask-cors
+gunicorn==20.0.4
