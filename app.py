@@ -33,7 +33,7 @@ def update_nome():
     if idcliente is None or nome is None:
         return jsonify({"error": "Missing 'idcliente' or 'nome' parameter"}), 400
 
-    token = 'ea9b394b026ef11006aa31f6e68eae8e6cea2393'
+    token = 'fb1912394dd41792e43c0b2d71a40d4e9dccf6ac'
     url = f"https://api.pipedrive.com/v1/persons/{idcliente}?api_token={token}"
 
     payload = json.dumps({
@@ -53,4 +53,4 @@ def update_nome():
         return jsonify({"success": False, "message": "Falha ao atualizar o nome"}), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000)
